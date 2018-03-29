@@ -1,0 +1,172 @@
+nav{
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border-bottom: solid 1px #f0f0f0;
+	background: #fff;
+}
+nav .logo{
+	width: 200px;
+	height: 60px;
+	display: inline-block;
+}
+nav .menus{
+    display: inline-block;
+}
+nav .menus li{
+	list-style: none;
+	float: left;
+	line-height: 60px;
+	padding: 0 24px;
+}
+nav .menus li.active{
+	color: #d0ab36
+}
+.main{
+	position: relative;
+	top: 60px;
+	width: 100%;
+}
+.main .left{
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	overflow: auto;
+	border-right: solid 1px #f0f0f0;
+}
+.main .content{
+	width: calc(100% - 200px);
+	height: 100%;
+	margin-left: 200px;
+	padding: 24px;
+}
+.leftmunes{
+	/*margin-top: 16px;*/
+}
+.leftmunes li{
+	list-style: none;
+	padding: 16px 16px;
+}
+.leftmunes li.active{
+	border-left: solid 3px #d0ab36;
+	color: #d0ab36;
+}
+
+.path{
+	height: 60px;
+	border-bottom: solid 1px #f0f0f0;
+	margin-bottom: 32px;
+}
+.path .cur{
+	line-height: 60px;
+	border-bottom: solid 2px #d0ab36;
+	display: inline-block;
+}
+.bg1{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../image/bg1.jpg');
+	background-size: cover;
+}
+.bg2{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../image/bg2.jpg');
+	background-size: cover;
+}
+.in{
+	margin: 8px 0;
+}
+.in label{
+	display: block;
+	margin: 8px 0;
+}
+input{
+	height: 32px;
+    border-radius: 3px;
+    line-height: 30px;
+    font-size: 14px;
+    box-shadow: none;
+    outline: none;
+    display: block;
+    border: solid 1px #cdcdcd;
+    color: #888888;
+    padding: 0 16px;
+}
+
+
+/*------------------------------------------------------------------------------*/
+.big-btn{
+	width: 240px;
+	height: 46px;
+	line-height: 42px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 18px;
+	text-decoration: none;
+	display: block;
+	border-radius: 30px;
+	margin: 0 auto;
+}
+.login-btn{
+	border:solid 2px #fff;
+	background: #fff;
+	color: #f23730;
+	margin-top: 20%;
+}
+.register-btn{
+	border:solid 2px #fff;
+	color: #fff;
+	margin-top: 20px;
+}
+.register{
+	width: 400px;
+	height: 340px;
+	margin: 0 auto;
+	border:solid 1px #f0f0f0;
+	background: #fff;
+	border-radius: 3px;
+	margin-top: 100px;
+	padding: 12px 24px;
+	box-sizing: border-box;
+}
+.register .tt{
+	text-align: center;
+	font-size: 20px;
+	margin: 12px 0;
+	color: #f23730;
+}
+.register .oper{
+	text-align: center;
+}
+.register .btn{
+	height: 32px;
+	line-height: 32px;
+	border-radius: 4px;
+	background: #f23730;
+	text-align: center;
+	color: #fff;
+	margin-top: 16px;
+}
+.register a{
+	font-size: 12px;
+	color: #30aaf2;
+	margin-top:8px;
+	display: block;
+}
+
+
+
+
+

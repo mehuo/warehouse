@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>物料管理</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<script src="../../js/vue/vue.js"></script>
+	<script src="../../js/apps/components/nav.js"></script>
+	<style>
+		.fade-enter-active, .fade-leave-active {
+		  transition: opacity .5s;
+		}
+		.fade-enter, .fade-leave-to {
+		  opacity: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="addmaterial">
+		<nav id="nav">
+			<mynav :curmenus="'store'"></mynav>
+		</nav>
+		<div class="main">
+			<div class="left">
+				<ul class="leftmunes">
+					<li class="active">物料管理</li>
+					<li>出入库管理</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="path">
+					<span>仓库管理 > </span>
+					<span class="cur">添加物料</span>
+				</div>
+				<form>
+					<div id="demo">
+					    <div @click="changeStatus">Toggle</div>
+						<transition name="fade">
+						    <p v-if="show">hello</p>
+						</transition>
+					</div>
+					<div>
+						<label for="">物料名称</label>
+						<input type="text" v-model="meterialInfo.name">
+					</div>
+					<div>
+						<label for="">物料类型</label>
+						<select v-model="meterialInfo.type">
+						    <option disabled value="">请选择</option>
+						    <option v-for="item in types" :value="item.id">{{item.name}}</option>
+						</select>
+					</div>
+					<div>
+						<label for="">现存数量</label>
+						<input type="text" v-model.number="meterialInfo.num">
+					</div>
+					<div>
+						<label for="">采购单价</label>
+						<input type="text" v-model.number="meterialInfo.price">
+					</div>
+					<div>
+						<label for="">描述</label>
+						<input type="text" v-model="meterialInfo.desc">
+					</div>
+				</form>
+				<button @click="saveToDB">保存</button>
+				<button @click="clear">清空</button>
+			</div>
+		</div>
+	</div>	
+</body>
+<script src="../../js/apps/comp/addmaterial.js"></script>
+
+</html>

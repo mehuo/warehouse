@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<script type="text/javascript" src="/js/common.map.js"></script>
+</head>
+<script>
+	function getJson(){
+		$.ajax({
+			type:"POST",
+			url:"http://127.0.0.1:8888/test/getJson",
+			success:function(data){
+				console.log(data)
+			}
+		})
+	}
+</script>
+<body class="bg2">
+	<a onclick="getJson();">获取JSON</a>
+	<a class="big-btn login-btn" href="/views/admin/login.html">登录</a>
+	<a class="big-btn register-btn" href="/views/admin/register.html">注册</a>
+</body>
+
+</html>
