@@ -1,5 +1,8 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var router = express.Router();
+
+router.use(bodyParser.urlencoded({extended:true}))
 
 var jsonWrite = function(res, ret) {
     if(typeof ret === 'undefined') {
@@ -12,9 +15,11 @@ var jsonWrite = function(res, ret) {
     }
 };
 
-router.post('/getJson', function(req, res, next) {
-    console.log(req.body);
-	console.log('-------------请求到了');
+router.post('/addUser', function(req, res) {
+    console.log("adduser")
+    console.log('------------------------------',req.params);
+    console.log('------------------------------',req.query);
+    console.log('------------------------------',req.body);
 
     jsonWrite(res,{name:'aaa',pwd:'123'});
     res.end('is over');

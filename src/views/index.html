@@ -9,6 +9,8 @@
 	function getJson(){
 		$.ajax({
 			type:"POST",
+			data:{a:1,b:2},
+			dataType:'json',
 			url:"http://127.0.0.1:8888/test/getJson",
 			success:function(data){
 				console.log(data)
