@@ -2,8 +2,8 @@
 var sqlMap = {
     // 用户
     user: {
-        login: 'SELECT userpsw FROM admin WHERE username = ?;',
-        add: 'insert into admin(username, userpsw) values ( ?, ?);'
+        login: 'SELECT password FROM t_user WHERE name = ?;',
+        add: 'INSERT INTO t_user(name, password , role , create_time , update_time , is_delete) values (?, ? ,? ,?,?,?);'
     }
 }
 

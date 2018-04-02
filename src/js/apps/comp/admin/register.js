@@ -5,31 +5,32 @@ var app = new Vue({
 			uname:'',
 			password:'',
 			confirm_password:''
+		},
+		loginInfo:{
+			uname:'',
+			password:''
 		}
 	},
 	methods:{
 		saveToDb:function(){
 			var that = this;
-			console.log(that.userinfo)
-			// if(!that.userinfo.uname){
-			// 	alert('用户名必填');
-			// 	return;
-			// }
-			// if(that.userinfo.uname != that.userinfo.confirm_password){
-			// 	alert('两次输入了不同的密码');
-			// 	return;
-			// }
-			// $.ajax({
-			// 	type:'POST',
-			// 	url:'http://127.0.0.1:8888/admin/addUser',
-			// 	data: that.userinfo,
-			// 	dataType: "json",
-			// 	success:function(data){
-			// 		console.log(data);
-			// 	}
-			// })
-			$.post('http://127.0.0.1:8888/admin/addUser',that.userinfo,function(data){
+			$.post('/admin/addUser',that.userinfo,function(data){
 				console.log(data);
+				if(data.status == 0){
+					window.location.href="/views/admin/login.html";
+				}
+			})
+		},
+		login:function(){
+			var that = this;
+			$.post('/admin/login',that.loginInfo,function(data){
+				console.log(data);
+				if(data.status == 0){
+					console.log('登录成功')
+					window.location.href = "/views/material/index.html"
+				}else{
+					alert(data.statusinfo);
+				}
 			})
 		}
 	}
