@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>物料管理</title>
+	<title>系统管理</title>
 	<script src="/js/common.map.js"></script>
 </head>
 <body>
-	<div id="material">
-		<mynav :curmenus="'store'"></mynav>
+	<div id="systemIndex">
+		<mynav :curmenus="'system'"></mynav>
 		<div class="main">
 			<div class="left">
 				<ul class="leftmunes">
-					<li class="active">物料管理</li>
-					<li>出入库管理</li>
+					<li class="active">用户管理</li>
+					<li>角色管理</li>
 				</ul>
 			</div>
 			<div class="content">
 				<div class="path">
-					<span>仓库管理 > </span>
-					<span class="cur">物料管理</span>
+					<span>系统管理 > </span>
+					<span class="cur">用户管理</span>
 				</div>
 				<div>
 					<table>
@@ -46,6 +46,6 @@
 		</div>
 	</div>	
 </body>
-<script src="../../js/apps/comp/material.js"></script>
+<script src="/js/apps/comp/system/systemIndex.js"></script>
 
 </html>

@@ -6,7 +6,7 @@ nav{
 	left: 0;
 	z-index: 100;
 	border-bottom: solid 1px #f0f0f0;
-	background: #fff;
+	background: #e34440;
 }
 nav .logo{
 	width: 200px;
@@ -18,12 +18,15 @@ nav .menus{
 }
 nav .menus li{
 	list-style: none;
-	float: left;
-	line-height: 60px;
-	padding: 0 24px;
+    float: left;
+    line-height: 40px;
+    padding: 0 24px;
+    margin: 10px;
+    border-radius: 4px;
+    color: #fff;
 }
 nav .menus li.active{
-	color: #d0ab36
+    background: #ea706f;
 }
 .main{
 	position: relative;
@@ -37,34 +40,64 @@ nav .menus li.active{
 	left: 0;
 	top: 60px;
 	overflow: auto;
-	border-right: solid 1px #f0f0f0;
+	background: #f0f0f0;
 }
 .main .content{
 	width: calc(100% - 200px);
 	height: 100%;
 	margin-left: 200px;
-	padding: 24px;
+	padding: 36px 24px;
+    box-sizing: border-box;
 }
 .leftmunes{
 	/*margin-top: 16px;*/
+	margin-right: 6px;
+	position: relative;
+	height: 100%;
+	background: #fafafa;
 }
 .leftmunes li{
 	list-style: none;
-	padding: 16px 16px;
+    padding: 16px 16px;
+    border-bottom: solid 1px #cdcdcd;
+    color: #666666;
+    background: #fafafa;
 }
 .leftmunes li.active{
-	border-left: solid 3px #d0ab36;
-	color: #d0ab36;
+	background: #fff;
 }
+
+table{
+	width: 100%;
+	border: solid 1px #cdcdcd;
+}
+table thead{
+	border-bottom: solid 1px #cdcdcd;
+	background: #fafafa;
+}
+table thead tr{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+table tbody tr{
+	border-bottom: solid 1px #cdcdcd;
+}
+table tbody tr td{
+	padding: 14px;
+	text-align: center;
+}
+
+
 
 .path{
 	height: 60px;
-	border-bottom: solid 1px #f0f0f0;
+	border-bottom: solid 1px #cdcdcd;
 	margin-bottom: 32px;
 }
 .path .cur{
 	line-height: 60px;
-	border-bottom: solid 2px #d0ab36;
+	border-bottom: solid 2px #e34440;
 	display: inline-block;
 }
 .bg1{
