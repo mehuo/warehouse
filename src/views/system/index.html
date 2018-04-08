@@ -21,7 +21,7 @@
 					<span class="cur">用户管理</span>
 				</div>
 				<div>
-					<table>
+					<!-- <table>
 						<thead>
 							<tr>
 								<td>序号</td>
@@ -37,10 +37,11 @@
 								<td>{{item.type}}</td>
 								<td>{{item.num}}</td>
 							</tr>
-							<tr v:for='item in datalist'>
-							</tr>
+
 						</tbody>
-					</table>
+					</table> -->
+					{{pageData}}
+					<page :pagedata="pageData"></page>
 				</div>
 			</div>
 		</div>

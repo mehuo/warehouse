@@ -1,5 +1,5 @@
-var testApi = require('./test');
 var adminApi = require('./admin');
+var userApi = require('./system/user');
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -21,8 +21,8 @@ app.all('*', function(req, res, next) {
 app.use(express.static(path.join(__dirname, '../src')));
 
 // 后端api路由
-app.use('/test', testApi);
 app.use('/admin', adminApi);
+app.use('/system/user', userApi);
 
 // 监听端口
 app.listen(8888);

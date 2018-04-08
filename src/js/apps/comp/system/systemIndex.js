@@ -7,6 +7,10 @@ var material = new Vue({
 	data:{
 		message: message,
 		datalist : [],
+		keyword:'',
+		page:1,
+		page_size:2,
+		pageData:{}
 	},
 	created:function(){
 		this.getList();
@@ -15,17 +19,20 @@ var material = new Vue({
 		getList:function(info){
 			var that = this;
 			that.datalist = [];
-			console.log(that.datalist)
-			for( i = 0 ; i < 20 ; i++ ){
-				that.item = {};
-				that.item.id = i;
-				that.item.name = "物料" + i ;
-				that.item.type = 'type' + i;
-				that.item.num = i+1;
-				that.datalist.push(this.item);
-			}
-			console.log(that.datalist)
-
+			console.log(that.datalist);
+			$.post('/system/user/list',{
+				keyword : that.keyword,
+				page : that.page,
+				page_size : that.page_size
+			},function(res){
+				console.log(res);
+				if(res.status == 0){
+					that.pageData = res.data;
+					console.log(that.pageData);
+				}else{
+					alert(res.statusinfo);
+				}
+			})
 		},
 		changeIt:function(){
 			var that = this;
