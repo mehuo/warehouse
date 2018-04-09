@@ -1,15 +1,12 @@
-var message = 'hello world';
-Object.freeze(message);
-
+var tools = new MyTools();
 
 var material = new Vue({
 	el:'#systemIndex',
 	data:{
-		message: message,
 		datalist : [],
 		keyword:'',
 		page:1,
-		page_size:2,
+		page_size:1,
 		pageData:{}
 	},
 	created:function(){
@@ -19,7 +16,6 @@ var material = new Vue({
 		getList:function(info){
 			var that = this;
 			that.datalist = [];
-			console.log(that.datalist);
 			$.post('/system/user/list',{
 				keyword : that.keyword,
 				page : that.page,
@@ -28,15 +24,22 @@ var material = new Vue({
 				console.log(res);
 				if(res.status == 0){
 					that.pageData = res.data;
-					console.log(that.pageData);
+					that.datalist = that.pageData.data;
+					that.datalist.map(function(item,index){
+						item['create_time'] = tools._dateFormat(new Date(item['create_time']));
+						item['update_time'] = tools._dateFormat(new Date(item['update_time']));
+						return item;
+					})
 				}else{
 					alert(res.statusinfo);
 				}
 			})
 		},
-		changeIt:function(){
-			var that = this;
-			that.message = 'nihao';
+		//分页查询
+		queryByPage:function(data){
+			this.page = data.page;
+			this.page_size = data.page_size;
+			this.getList();
 		}
 		
 	}

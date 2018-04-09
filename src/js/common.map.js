@@ -1,4 +1,5 @@
 document.write('<script type="text/javascript" src="/js/jquery/jquery.min.js"></script>');
+document.write('<script type="text/javascript" src="/js/tools.js"></script>');
 document.write('<script type="text/javascript" src="/js/vue/vue.js"></script>');
 document.write('<script type="text/javascript" src="/js/vue/vue-router.js"></script>');
 document.write('<script src="/js/apps/components/nav.js"></script>');

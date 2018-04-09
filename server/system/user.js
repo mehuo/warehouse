@@ -54,6 +54,7 @@ var pageNation = function(total,page,page_size,data){
 var setPageNation = function(data ,key , value){
     console.log(key,value)
     data[key] = value;
+    data['last_page'] = Math.ceil(data['total']/data['page_size']);    
     return data;
 }
 

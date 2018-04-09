@@ -87,8 +87,67 @@ table tbody tr td{
 	padding: 14px;
 	text-align: center;
 }
-
-
+.page{
+	text-align: center;
+	margin: 10px 0;
+}
+.page .pager{
+	font-size: 14px;
+    color: #888888;
+}
+.page .pager a{
+    width: 24px;
+	height: 24px;
+	line-height: 24px;
+    border: solid 1px #cdcdcd;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 0 2px;
+}
+.page .pager a.active,.page .pager a:hover{
+    border: solid 1px rgba(227, 68, 64, 0.48);
+    background: rgba(227, 68, 64, 0.48);
+    color: #fff;
+}
+.page .pager a.p{
+    width: auto;
+    padding: 0 12px;
+}
+.page .pager a.prev{
+    background : url('/image/prev.png') no-repeat center center;
+    vertical-align: bottom;
+    background-size: 50%;
+}
+.page .pager a.next{
+    background : url('/image/next.png') no-repeat center center;
+    vertical-align: bottom;
+    background-size: 50%;
+}
+.page .pager .topage{
+	display: inline-block;
+	margin-left: 8px;
+}
+.page .pager .topage span:nth-child(1){
+	margin-right: 8px;
+}	
+.page .pager .topage input{
+	display: inline-block;
+    width: 60px;
+    height: 26px;
+    margin: 0 4px;
+}
+.page .pager .switch{
+	display: inline-block;
+	margin-left: 8px;
+}
+.page .pager .switch select{
+	width: 60px;
+	height: 27px;
+	border-radius: 3px;
+	border: solid 1px #cdcdcd;
+	color: #888888;
+	margin-right: 4px;
+}
 
 .path{
 	height: 60px;
