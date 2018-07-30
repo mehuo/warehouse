@@ -7,6 +7,11 @@ var sqlMap = {
         add: 'INSERT INTO t_user(name, password , role , create_time , update_time , is_delete) values (?, ? ,? ,?,?,?);',
     	total : 'SELECT COUNT(*) total FROM t_user WHERE NAME LIKE ?',
     	list : 'SELECT * FROM t_user WHERE name like ? limit ?,?'
+    },
+    // 角色
+    role:{
+    	total : 'SELECT COUNT(*) total FROM t_role WHERE NAME LIKE ?',
+    	list : 'SELECT * FROM t_role WHERE name like ? limit ?,?'
     }
 }
 

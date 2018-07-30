@@ -1,0 +1,68 @@
+*{
+  margin:0;
+  padding: 0;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+.el-container{
+  width: 1140px;
+  margin:0 auto;
+}
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
+.el-header, .el-footer {
+  color: #333;
+  text-align: left;
+  line-height: 80px;
+  padding: 0;
+}
+.el-header .logo{
+  font-size: 30px;
+  color: #66b1ff;
+  font-family: fantasy;
+  margin-left: 20px;
+  float: left;
+}
+.el-header .userInfo{
+  float: right;
+}
+.el-header .userInfo .el-dropdown{
+  height: 50px;
+}
+.el-aside {
+  color: #333;
+  text-align: left;
+  line-height: 200px;
+}
+.el-submenu__title:hover,.el-menu-item:focus, .el-menu-item:hover{
+  color: #409EFF;
+  background: none;
+}
+.el-menu{
+  border-right: none;
+}
+
+.el-main {
+  color: #333;
+}
+.el-table th{
+  text-align: center;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+

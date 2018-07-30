@@ -8,7 +8,7 @@ router.use(bodyParser.urlencoded({extended:true}))
 
 var connection = mysql.createConnection(models.mysql);
 connection.connect();
-var user_sql = $sql.user;
+var user_sql = $sql.role;
 
 
 var jsonWrite = function(res, ret) {
@@ -31,11 +31,13 @@ var fail = function(err){
     }
 }
 
+/*
+    total 总页数
+    page 当前页数
+    page_size 每页显示条数
+    data 数据
+*/
 var pageNation = function(total,page,page_size,data){
-    //total 总页数
-    //page 当前页数
-    //page_size 每页显示条数
-    //data 数据
     console.log('pageparams---------------',total,page,page_size,data);
     var page_data = {};
     page_data.total = total || 0;
